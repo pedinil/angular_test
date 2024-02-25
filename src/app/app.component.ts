@@ -19,7 +19,8 @@ export class AppComponent {
 
   title = 'mywhishlist';
 
-  toggleItem(){
-    console.log("clicked!");
+  toggleItem(item : ModelData){
+    item.isComplete=!item.isComplete;
+    console.log(item)
   }
 }
