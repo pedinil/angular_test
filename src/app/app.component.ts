@@ -11,9 +11,11 @@ import { ModelData } from '../models/modeldata';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  items= [ new ModelData('learn',true),
-          new ModelData('cafe',true),
-          new ModelData('tea',true)];
+  items : any= [ 
+          // new ModelData('learn',true),
+          // new ModelData('cafe',true),
+          // new ModelData('tea',true)
+        ];
 
   title = 'mywhishlist';
 }
