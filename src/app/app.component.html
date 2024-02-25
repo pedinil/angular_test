@@ -1,5 +1,8 @@
 <div class="container">
 
+  <div *ngIf="items.length==0">
+    contenct is not avaible 
+  </div>
   <div *ngFor="let item of items">
     {{ item.modelText }}
   </div>
