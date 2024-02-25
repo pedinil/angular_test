@@ -3,11 +3,13 @@ import {CommonModule} from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { ModelData } from '../models/modeldata';
 import { FormsModule } from '@angular/forms';
+import { WishListComponent } from './wish-list/wish-list.component';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,CommonModule,FormsModule],
+  imports: [RouterOutlet,CommonModule,FormsModule,WishListComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -44,9 +46,6 @@ export class AppComponent {
      
   }
 
-  toggleItem(item : ModelData){
-    item.isComplete=!item.isComplete;
-    console.log(item)
-  }
+ 
   
 }

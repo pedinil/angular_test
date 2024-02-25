@@ -1,0 +1,13 @@
+<div *ngIf="items.length==0; else showItems">
+    contenct is not avaible 
+  </div>
+
+  <ng-template #showItems>
+  <div *ngFor="let item of items">
+    <input 
+      class="checkbox"
+      type="checkbox"
+      (click)="toggleItem(item)"
+    >{{ item.modelText  }}
+  </div>
+</ng-template>
