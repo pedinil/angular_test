@@ -12,10 +12,14 @@ import { ModelData } from '../models/modeldata';
 })
 export class AppComponent {
   items : any= [ 
-          // new ModelData('learn',true),
-          // new ModelData('cafe',true),
-          // new ModelData('tea',true)
+          new ModelData('learn',true),
+          new ModelData('cafe',true),
+          new ModelData('tea',true)
         ];
 
   title = 'mywhishlist';
+
+  toggleItem(){
+    console.log("clicked!");
+  }
 }

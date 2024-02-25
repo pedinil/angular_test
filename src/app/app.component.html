@@ -6,7 +6,11 @@
 
   <ng-template #showItems>
   <div *ngFor="let item of items">
-    {{ item.modelText }}
+    <input 
+      class="checkbox"
+      type="checkbox"
+      (click)="toggleItem()"
+    >{{ item.modelText  }}
   </div>
 </ng-template>
 
