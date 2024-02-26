@@ -4,12 +4,13 @@ import { RouterOutlet } from '@angular/router';
 import { ModelData } from '../models/modeldata';
 import { FormsModule } from '@angular/forms';
 import { WishListComponent } from './wish-list/wish-list.component';
+import { AddListcomboComponent } from './add-listcombo/add-listcombo.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,CommonModule,FormsModule,WishListComponent],
+  imports: [RouterOutlet,CommonModule,FormsModule,WishListComponent,AddListcomboComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -24,14 +25,11 @@ export class AppComponent {
 
   selectFilter :string = '0';
 
-  newItem = '';
+
 
   visibleItems : ModelData[]= this.items;
   
-  addNewItem(){
-    this.items.push(new ModelData(this.newItem,false));
-    this.newItem='';
-  }
+ 
 
   filterChange(value : any)
   {
